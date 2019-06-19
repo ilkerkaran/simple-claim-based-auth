@@ -9,9 +9,9 @@ namespace ClaimBasedAuthorization.Filters
 {
     public class PermissionBasedAuthorizeAttribute : TypeFilterAttribute
     {
-        public PermissionBasedAuthorizeAttribute(params PermissionType[] authorityArray) : base(typeof(AuthorityRequirementFilter))
+        public PermissionBasedAuthorizeAttribute(params PermissionType[] permissionArray) : base(typeof(PermissionRequirementFilter))
         {
-            Arguments = new object[] { authorityArray };
+            Arguments = new object[] { permissionArray };
         }
     }
 }
